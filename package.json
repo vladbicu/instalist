@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/vladbicu/instalist/issues"
   },
-  "homepage": "https://github.com/vladbicu/instalist#readme"
+  "homepage": "https://github.com/vladbicu/instalist#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
