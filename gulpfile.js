@@ -52,12 +52,9 @@ gulp.task('less', function compileLess() {
 		.pipe(gulp.dest('bin/css/'));
 });
 
-gulp.task('copy', function cp(){
-	gulp.src('./lib/*.html').pipe(gulp.dest('./bin'));
-	gulp.src('./lib/css/fonts/proxima/*').pipe(gulp.dest('./bin/css/fonts/proxima'));
-	gulp.src('./lib/img/*').pipe(gulp.dest('./bin/img'));
-	gulp.src('./lib/js/onepagescroll.js').pipe(gulp.dest('./bin/js'));
-	gulp.src('./lib/js/main.js').pipe(gulp.dest('./bin/js'));
+gulp.task('copy', function cp() {
+	gulp.src('./lib/html/*.html').pipe(gulp.dest('./bin'));
+	gulp.src('./lib/images/*').pipe(gulp.dest('./bin/images'));
 });
 
 gulp.task('eslint', function lint() {
@@ -67,27 +64,27 @@ gulp.task('eslint', function lint() {
 		.pipe(eslint.failOnError());
 });
 
-gulp.task('watch:less', function () {
+gulp.task('watch:less', function watchLess() {
 
-	gulp.watch('./lib/css/**/*.less', function () {
+	gulp.watch('./lib/css/**/*.less', function wl() {
 		console.log('*** Building LESS ***');
 		return sequence('less');
 	});
 
 });
 
-gulp.task('watch:js', function () {
-	gulp.watch('./lib/js/**/*.js', function() {
+gulp.task('watch:js', function watchJs() {
+	gulp.watch('./lib/js/**/*.js', function wj() {
 		console.log('*** Building JS ***');
 		return watchBundlerTask('./lib/js/main.js', 'main.js');
 	});
 });
 
-gulp.task('default', function(){
+gulp.task('default', function def() {
 	return sequence(
 		'copy',
 		'watch:less',
-		'eslint',
+		// 'eslint',
 		'watch:js'
 	);
 });
