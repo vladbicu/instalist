@@ -213,6 +213,6 @@
 		"max-params": [2, 6],
 		"max-statements": [2, 40],
 		"no-bitwise": 2,
-		"no-plusplus": 2
+		"no-plusplus": 0
 	}
 }
