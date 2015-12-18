@@ -1,15 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import 'reset.less';
+
+
 body{
 	background-image: url('../images/bg.jpg');
-	background-size: 100% auto;
-	color:white;
-}
+	background-size: cover;
 
-a{
-	color:white;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper{
 	width:100%;
+	padding: 0 60px;
+
 
 }
 
@@ -18,8 +21,7 @@ input:focus{
 }
 
 header{
-	width:85%;
-	margin:0 auto;
+	margin: 0 auto 40px auto;
 }
 
 header input{
@@ -54,4 +56,48 @@ header .search{
 
 header .search:hover, header .search:focus{
 	background-color:#412ce1;
+}
+
+// items list style
+
+.items{
+	display: flex;
+	flex-flow: column wrap;
+
+	width: 85%;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.item{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+
+	width: 100%;
+	height: 60px;
+	margin: 0 0 5px 0;
+
+	background-color: #fff;
+	border-radius: 7px;
+	overflow: hidden;
+	cursor: pointer;
+
+	&__play{
+		width: 60px;
+		height: 100%;
+		margin: 0 10px 0 0;
+
+		background-color: red;
+	}
+
+	&__add{
+		width: 40px;
+		height: 40px;
+		margin: 0 20px 0 auto;
+
+		background-color: green;
+		border-radius: 50%;
+
+	}
 }
