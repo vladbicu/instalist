@@ -1,0 +1,23 @@
+{
+  "name": "instalist",
+  "version": "1.0.0",
+  "description": "most awesome playlist app ever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladbicu/instalist.git"
+  },
+  "keywords": [
+    "playlist",
+    "music"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladbicu/instalist/issues"
+  },
+  "homepage": "https://github.com/vladbicu/instalist#readme"
+}
