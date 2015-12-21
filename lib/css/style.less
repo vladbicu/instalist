@@ -91,13 +91,35 @@ header .search:hover, header .search:focus{
 		background-color: red;
 	}
 
-	&__add{
+	&__add, &__delete{
 		width: 40px;
 		height: 40px;
 		margin: 0 20px 0 auto;
 
-		background-color: green;
 		border-radius: 50%;
 
+	}
+
+	&__add{
+		background-color: green;
+	}
+
+	&__delete{
+		background-color: red;
+	}
+}
+
+// player style
+.player{
+	#main-content{
+		display: flex;
+		flex-flow: row wrap;
+
+		height: 100vh;
+	}
+	.items, .video-wrapper{
+		margin: 0;
+		width: 50%;
+		height: 100%;
 	}
 }
