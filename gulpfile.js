@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var lessReporter = require('gulp-less-reporter');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var livereload = require('gulp-livereload');
+// var livereload = require('gulp-livereload');
 
 
 var browserify = require('browserify');
@@ -66,7 +66,7 @@ gulp.task('eslint', function lint() {
 });
 
 gulp.task('watch:less', function watchLess() {
-	livereload.listen();
+	// livereload.listen();
 	gulp.watch('./lib/css/**/*.less', function wl() {
 		console.log('*** Building LESS ***');
 		return sequence('less');
@@ -75,7 +75,7 @@ gulp.task('watch:less', function watchLess() {
 });
 
 gulp.task('watch:js', function watchJs() {
-	livereload.listen();
+	// livereload.listen();
 	gulp.watch('./lib/js/**/*.js', function wj() {
 		console.log('*** Building JS ***');
 		return watchBundlerTask('./lib/js/main.js', 'main.js');
